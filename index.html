@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div id="particles-js"></div>
     <header class="header">
         <div class="header__container">
             <div class="header__body">
@@ -113,8 +114,103 @@
                 </div>
             </div>
         </section>
+        <section class="main__tools tools">
+            <div class="tools__container">
+                <div class="tools__body">
+                    <div class="tools__content">
+                        <h3 class="tools__title">Инструменты</h3>
+                        <div class="tools__text">Тестирование на проникновение позволяет ответить на вопрос, как кто-то со злым умыслом может вмешаться в вашу сеть.</div>
+                    </div>
+                    <div class="tools__logos">
+                        <img src="css/images/tools/metalsploit.svg" alt="metalsploit">
+                        <img src="css/images/tools/metalsploit.svg" alt="metalsploit">
+                        <img src="css/images/tools/metalsploit.svg" alt="metalsploit">
+                        <img src="css/images/tools/metalsploit.svg" alt="metalsploit">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main__security security">
+            <div class="security__container">
+                <div class="security__body">
+                    <div class="security__content">
+                        <h4 class="security__title">Наши продукты направлены на вашу безопасность.</h4>
+                        <div class="security__text">Мы придерживаемся в своей работе простого принципа: детектировать и блокировать любую вредоносную атаку.</div>
+                    </div>
+                    <div class="security__items item-security">
+                        <div class="item-security__body">
+                            <div class="item-security__logo"><img src="css/images/security/1.svg" alt="logo"></div>
+                            <div class="item-security__text">Анонимность</div>
+                        </div>
+                        <div class="item-security__body">
+                            <div class="item-security__logo"><img src="css/images/security/2.svg" alt="logo"></div>
+                            <div class="item-security__text">Проверка на наличие угроз</div>
+                        </div>
+                        <div class="item-security__body">
+                            <div class="item-security__logo"><img src="css/images/security/3.svg" alt="logo"></div>
+                            <div class="item-security__text">Обнаружение и предотвращение аттак</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="main__callback callback">
+            <div class="callback__container">
+                <div class="callback__box">
+                    <div class="callback__title">Вы можете связаться с нами удобным для Вас способом</div>
+                    <div class="callback__body">
+                        <div class="callback__form">
+                            <div class="input-container ic1">
+                                <input id="firstname" class="input" type="text" placeholder="Как к Вам обращаться?" />
+                            </div>
+                            <div class="input-container ic2">
+                                <input id="text" class="input" type="text" placeholder="Какую компанию Вы представляете?" />
+                            </div>
+                            <div class="input-container ic3">
+                                <input id="email" class="input" type="text" placeholder="Адрес электронной почты" />
+                            </div>
+                            <div class="input-container ic4">
+                                <input id="text" class="input" type="text" placeholder="Введите ваше сообщение" />
+                            </div>
+                            <div class="switchbox">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                                <p class="switch__text">Я согласен на обработку персональных данных</p>
+                            </div>
+                            <button type="text" class="submit__button button">Отправить данные</button>
+                        </div>
+                        <div class="callback__wrap">
+                            <div class="callback__contacts">
+                                <a href="#" class="contacts__item"><img src="css/images/callback/1.svg" alt="contact">Ленинградский пр-т., 27, к2</a>
+                                <a href="tel:84950000000" class="contacts__item"><img src="css/images/callback/2.svg" alt="contact">+7 (495) 000 - 00 - 00</a>
+                                <a href="malito:admin@trustcrypt.com" class="contacts__item"><img src="css/images/callback/3.svg" alt="contact">admin@trustcrypt.com</a>
+                            </div>
+                            <div class="callback__map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <script src="js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+    <script src="js/particles.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <script>
+        particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
 </body>
 
 </html>
