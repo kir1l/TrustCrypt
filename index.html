@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="css/favicon.ico">
     <title>TrustCrypt</title>
@@ -22,8 +23,9 @@
                 </div>
                 <nav class="header__navbar navbar-header">
                     <ul class="navbar-header__navigation">
-                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Главная</a></li>
-                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Продукты</a></li>
+                        <li class="navbar-header__item"><a href="index.html" class="navbar__link underline">Главная</a>
+                        </li>
+                        <li class="navbar-header__item"><a href="products.html" class="navbar__link underline">Продукты</a></li>
                         <li class="navbar-header__item"><a href="#" class="navbar__link underline">Блог</a></li>
                         <li class="navbar-header__item"><a href="#" class="navbar__link underline">Контакты</a></li>
                     </ul>
@@ -95,7 +97,7 @@
     <main class="main">
         <section class="main__top top">
             <div class="top__container">
-                <div class="top__body">
+                <div class="top__body" data-aos="fade-right" data-aos-duration="900">
                     <div class="top__heading heading-left">
                         <h1 class="top__title">Передовая кибербезопасность для любой компании</h1>
                         <p class="top__subtitle">Защитите ваш бизнес от всех видов киберугроз с помощью решений мирового класса. </p>
@@ -103,7 +105,7 @@
                     </div>
                     <div class="top__img"><img src="css/images/top/1.png" alt=""></div>
                 </div>
-                <div class="top__body sub-top__body">
+                <div class="top__body sub-top__body" data-aos="fade-left" data-aos-duration="1200">
                     <div class="top__img"><img src="css/images/top/2.png" alt=""></div>
                     <div class="top__heading heading-right">
                         <h1 class="top__title">Кибербезопасность нового поколения
@@ -114,7 +116,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__tools tools">
+        <section class="main__tools tools" data-aos="fade-up">
             <div class="tools__container">
                 <div class="tools__body">
                     <div class="tools__content">
@@ -133,20 +135,20 @@
         <section class="main__security security">
             <div class="security__container">
                 <div class="security__body">
-                    <div class="security__content">
+                    <div class="security__content" data-aos="fade-up-left">
                         <h4 class="security__title">Наши продукты направлены на вашу безопасность.</h4>
                         <div class="security__text">Мы придерживаемся в своей работе простого принципа: детектировать и блокировать любую вредоносную атаку.</div>
                     </div>
-                    <div class="security__items item-security">
-                        <div class="item-security__body">
+                    <div class="security__items item-security" data-aos="fade-right" data-aos-duration="900">
+                        <div class="item-security__body" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
                             <div class="item-security__logo"><img src="css/images/security/1.svg" alt="logo"></div>
                             <div class="item-security__text">Анонимность</div>
                         </div>
-                        <div class="item-security__body">
+                        <div class="item-security__body" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
                             <div class="item-security__logo"><img src="css/images/security/2.svg" alt="logo"></div>
                             <div class="item-security__text">Проверка на наличие угроз</div>
                         </div>
-                        <div class="item-security__body">
+                        <div class="item-security__body" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
                             <div class="item-security__logo"><img src="css/images/security/3.svg" alt="logo"></div>
                             <div class="item-security__text">Обнаружение и предотвращение аттак</div>
                         </div>
@@ -157,8 +159,9 @@
         <section class="main__callback callback">
             <div class="callback__container">
                 <div class="callback__box">
-                    <div class="callback__title">Вы можете связаться с нами удобным для Вас способом</div>
-                    <div class="callback__body">
+                    <div class="callback__title" data-aos="fade-down">Вы можете связаться с нами удобным для Вас способом
+                    </div>
+                    <div class="callback__body" data-aos="fade-up" data-aos-duration="1500">
                         <div class="callback__form">
                             <div class="input-container ic1">
                                 <input id="firstname" class="input" type="text" placeholder="Как к Вам обращаться?" />
@@ -209,12 +212,16 @@
 
 
 
-    <script src="js/particles.min.js"></script>
-    <script src="js/script.js" defer></script>
+    <script src="libs/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="libs/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <script>
         particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
             console.log('callback - particles.js config loaded');
         });
+
+        AOS.init();
     </script>
 </body>
 

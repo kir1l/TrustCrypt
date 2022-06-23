@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/products/products.css">
+    <link rel="shortcut icon" href="css/favicon.ico">
+    <title>products</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__body">
+                <div class="header__logo">
+                    <a href="#" class="logo__link">
+                        <img src="css/images/header/Logo.svg" alt="TrustCrypt">
+                    </a>
+                </div>
+                <nav class="header__navbar navbar-header">
+                    <ul class="navbar-header__navigation">
+                        <li class="navbar-header__item"><a href="index.html" class="navbar__link underline">Главная</a>
+                        </li>
+                        <li class="navbar-header__item"><a href="products.html" class="navbar__link active underline">Продукты</a></li>
+                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Блог</a></li>
+                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Контакты</a></li>
+                    </ul>
+
+                    <div class="header__dropdown">
+                        <label for="touch"><span class="change"><img class="flag" src="css/images/header/russia.svg"
+                                    alt="flag">
+                                RU <img class="arrow" src="css/images/header/dropdown.svg" alt="arrow"></span></label>
+                        <input type="checkbox" id="touch">
+                        <ul class="slide">
+                            <li>
+                                <a href="#"><img src="css/images/header/usa.png" alt="english">EN</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="css/images/header/japanese.png" alt="japanese">JA</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="css/images/header/korea.png" alt="korea">KR</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="css/images/header/germany.png" alt="germany">DE</a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="css/images/header/spain.png" alt="spain">SP</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__social">
+                        <a href="#" class="social__item"><img src="css/images/header/telegram.svg" alt="telegram"></a>
+                        <a href="#" class="social__item"><img src="css/images/header/twiter.svg" alt="twiter"></a>
+                        <a href="#" class="social__item"><img src="css/images/header/youtube.svg" alt="youtube"></a>
+                        <a href="#" class="social__item"><img src="css/images/header/whatsup.svg" alt="whatsup"></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="nav" class="navigation">
+        <div class="navigation__inner">
+            <div class="nav__body">
+                <div class="nav__nav">
+                    <div class="nav__logo">
+                        <a href="#" class="logo__link">
+                            <img src="css/images/header/Logo.svg" alt="TrustCrypt">
+                        </a>
+                    </div>
+                    <ul class="nav__navigation">
+                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Главная</a></li>
+                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Продукты</a></li>
+                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Контакты</a></li>
+                        <li class="navbar-header__item"><a href="#" class="navbar__link underline">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="header__social">
+                    <a href="#" class="social__item"><img src="css/images/header/telegram.svg" alt="telegram"></a>
+                    <a href="#" class="social__item"><img src="css/images/header/twiter.svg" alt="twiter"></a>
+                    <a href="#" class="social__item"><img src="css/images/header/youtube.svg" alt="youtube"></a>
+                    <a href="#" class="social__item"><img src="css/images/header/whatsup.svg" alt="whatsup"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="checkbox" id="show">
+    <label class="menu" for="show">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </label>
+    <main class="main">
+        <section class="main__our our">
+            <div class="our__container">
+                <div class="our__wrapper">
+                    <div class="our__content" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="our__title">Наши продукты</div>
+                        <div class="our__text">Мы придерживаемся в своей работе простого принципа: детектировать и блокировать любую вредоносную атаку.</div>
+                    </div>
+                    <div class="our__switch">
+                        <div class="swith__button button active">Все продукты</div>
+                        <div class="swith__button button">1 категория</div>
+                        <div class="swith__button button">2 категория</div>
+                        <div class="swith__button button">3 категория</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="main__products products">
+            <div class="products__container">
+                <div class="products__wrapper">
+                    <div class="products__grid">
+                        <div class="products-grid__item" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
+                            <div class="products-grid__img"><img src="css/products/images/item/Background.png" alt="product"></div>
+                            <div class="products-grid__title">Название продукта</div>
+                            <div class="products-grid__text">Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum...</div>
+                            <div class="products-grid__more">Подробнее</div>
+                        </div>
+                        <div class="products-grid__item" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
+                            <div class="products-grid__img"><img src="css/products/images/item/Background.png" alt="product"></div>
+                            <div class="products-grid__title">Название продукта</div>
+                            <div class="products-grid__text">Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum...</div>
+                            <div class="products-grid__more">Подробнее</div>
+                        </div>
+                        <div class="products-grid__item" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
+                            <div class="products-grid__img"><img src="css/products/images/item/Background.png" alt="product"></div>
+                            <div class="products-grid__title">Название продукта</div>
+                            <div class="products-grid__text">Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum...</div>
+                            <div class="products-grid__more">Подробнее</div>
+                        </div>
+                        <div class="products-grid__item" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
+                            <div class="products-grid__img"><img src="css/products/images/item/Background.png" alt="product"></div>
+                            <div class="products-grid__title">Название продукта</div>
+                            <div class="products-grid__text">Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum...</div>
+                            <div class="products-grid__more">Подробнее</div>
+                        </div>
+                        <div class="products-grid__item" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
+                            <div class="products-grid__img"><img src="css/products/images/item/Background.png" alt="product"></div>
+                            <div class="products-grid__title">Название продукта</div>
+                            <div class="products-grid__text">Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum...</div>
+                            <div class="products-grid__more">Подробнее</div>
+                        </div>
+                        <div class="products-grid__item" data-tilt data-tilt-glare data-tilt-max-glare="0.2" data-tilt-reverse="true">
+                            <div class="products-grid__img"><img src="css/products/images/item/Background.png" alt="product"></div>
+                            <div class="products-grid__title">Название продукта</div>
+                            <div class="products-grid__text">Lorem ipsum at vero eos et accusam et justo duo dolores et ea rebum...</div>
+                            <div class="products-grid__more">Подробнее</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__license">© 2022 LLC Trustcrypt. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+
+
+
+
+
+<script src="libs/particles.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="libs/vanilla-tilt.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script>
+    particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+
+    AOS.init();
+</script>
