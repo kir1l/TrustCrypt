@@ -1,0 +1,398 @@
+@import "../scss/nullstyle.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/*=========================HEADER==================*/
+
+[class*="__container"] {
+    max-width: 1330px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+body {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    color: #ecf1f0;
+    background-color: #000;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.button {
+    background-color: #0fae96;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    width: 168px;
+    height: 48px;
+    line-height: 21px;
+    transition: 0.4s ease;
+    &:hover {
+        border: 1px solid #0fae96;
+        background-color: transparent;
+        color: #0fae96;
+    }
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    max-height: 84px;
+    background: rgba(17, 1, 30, 0.1);
+    backdrop-filter: blur(25px);
+}
+
+.header__body {
+    padding: 20px 0;
+    display: flex;
+    color: #ecf1f0;
+    justify-content: space-between;
+}
+
+.navbar-header {
+    display: flex;
+    padding: 14px 0;
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
+}
+
+.navbar-header__navigation {
+    display: flex;
+    margin-right: 68px !important;
+    @media screen and (max-width: 950px) {
+        margin-right: 25px !important;
+    }
+}
+
+.navbar-header__item {
+    transition: color 0.7s;
+    .active {
+        color: #0fae96;
+    }
+    &:not(:last-child) {
+        margin-right: 29px;
+        @media screen and (max-width: 950px) {
+            margin-right: 14px;
+        }
+    }
+    &:hover {
+        color: #0fae96;
+    }
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::before {
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #0fae96;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .underline:hover::before {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+
+.navbar__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header__dropdown {
+    margin-right: 64px;
+    @media screen and (max-width: 950px) {
+        margin-right: 30px;
+    }
+}
+
+.change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    .flag {
+        margin-right: 4px;
+    }
+    .arrow {
+        margin-left: 7px;
+    }
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    background: #0eb99fbb;
+    box-shadow: 0 0 10px 7px #0fae9673;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 3px 3px 7px 7px;
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height 0.4s ease;
+}
+
+.slide li {
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: flex;
+        img {
+            margin-right: 4px;
+        }
+    }
+    max-width: 20px;
+    margin-top: 15px;
+}
+
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+    margin: 0;
+}
+
+#touch:checked+.slide {
+    height: 190px;
+}
+
+.header__social {
+    display: flex;
+}
+
+.social__item {
+    transition: 0.4s ease;
+    &:hover {
+        transform: scale(1.4);
+    }
+    &:not(:last-child) {
+        margin-right: 20px;
+        @media screen and (max-width: 950px) {
+            margin-right: 14px;
+        }
+    }
+}
+
+$elastic: ( position: left,
+width: 300,
+backgroundColor: #0fae96,
+duration: 300,
+);
+// get key
+$position: map-get($elastic,
+"position");
+$width: map-get($elastic,
+"width");
+$backgroundColor: map-get($elastic,
+"backgroundColor");
+$duration: map-get($elastic,
+"duration");
+// css button
+.menu {
+    @media screen and (min-width: 800px) {
+        display: none;
+    }
+    cursor: pointer;
+    position: fixed;
+    z-index: 999999;
+    top: 60px;
+    right: 20px;
+    transform: translate(-50%,
+    -50%);
+    cursor: pointer;
+    transition: 0.5s ease;
+    height: 50px;
+    &:hover .bar {
+        box-shadow: 1px 1px 7px 1px RGBa(0, 0, 0, 0.3);
+    }
+    .bar {
+        width: 30px;
+        height: 4px;
+        background: #fff;
+        box-shadow: 1px 1px 3px RGBa(0, 0, 0, 0.4);
+        border-radius: 2px;
+        transition: 0.4s ease;
+        &:not(:first-child) {
+            margin-top: 5px;
+        }
+    }
+}
+
+#show {
+    position: absolute;
+    left: -999px;
+    top: -999px;
+}
+
+#show:checked+.menu {
+    transform: translate(-50%, -50%) rotatey(180deg);
+    .bar {
+        transform: rotatey(180deg) rotatex(360deg);
+        &:first-child {
+            transform: rotate(-45deg);
+            margin-top: 10px;
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(3) {
+            margin-top: -14px;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// Start
+.navigation {
+    position: fixed;
+    width: $width * 1px;
+    height: 100%;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+    transition-delay: $duration * 1ms;
+    @if ($position==right) {
+        right: 0;
+    }
+    @else if ($position==left) {
+        left: 0;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+        .navigation__inner {
+            background-color: $backgroundColor;
+            transform: translate(0, 0);
+            transition: transform $duration * 1ms linear, background-color 0s linear ($duration * 2-1) * 1ms;
+            &:after {
+                width: 300%;
+                border-radius: 50%;
+                animation: elastic ($duration/2) * 1ms ease ($duration + 0.5) * 1ms both;
+            }
+        }
+    }
+}
+
+.navigation__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 999999;
+    padding: 20px;
+    @if ($position==right) {
+        transform: translate(100%, 0);
+    }
+    @else if ($position==left) {
+        transform: translate(-100%, 0);
+    }
+    transition: transform $duration * 1ms linear,
+    background-color 0s linear $duration * 1ms;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        @if ($position==right) {
+            left: 0;
+        }
+        @else if ($position==left) {
+            right: 0;
+        }
+        background-color: $backgroundColor;
+        border-radius: 50%;
+        z-index: -1;
+        transition: all $duration * 1ms linear;
+    }
+}
+
+@keyframes elastic {
+    0% {
+        border-radius: 50%;
+    }
+    45% {
+        border-radius: 0;
+    }
+    65% {
+        @if ($position==right) {
+            border-top-left-radius: 40px 50%;
+            border-bottom-left-radius: 40px 50%;
+        }
+        @else if ($position==left) {
+            border-top-right-radius: 40px 50%;
+            border-bottom-right-radius: 40px 50%;
+        }
+    }
+    80% {
+        border-radius: 0;
+    }
+    90% {
+        @if ($position==right) {
+            border-top-left-radius: 20px 50%;
+            border-bottom-left-radius: 20px 50%;
+        }
+        @else if ($position==left) {
+            border-top-right-radius: 20px 50%;
+            border-bottom-right-radius: 20px 50%;
+        }
+    }
+    100% {
+        border-radius: 0;
+    }
+}
+
+.nav__body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .nav__navigation {
+        margin: 40px 0 30px 0;
+        .navbar-header__item {
+            margin: 40px 0 0 0;
+            font-size: 35px;
+            font-weight: 500;
+        }
+    }
+    .header__social {
+        .social__item {
+            margin-right: 25px;
+            img {
+                width: 40px;
+            }
+        }
+    }
+}
