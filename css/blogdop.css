@@ -702,3 +702,48 @@ body {
     width: 100%;
   }
 }
+
+.item-popular__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 576px;
+}
+.item-popular__body:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.item-popular__img {
+  margin-right: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 218px;
+          flex: 0 0 218px;
+}
+
+.item-popular__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ecf1f0;
+  margin-bottom: 16px;
+}
+
+.item-popular__text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: #d4d4d4;
+  margin-bottom: 16px;
+}
+
+.item-popular__button {
+  border: 1px solid #0fae96;
+  color: #0fae96;
+  background-color: transparent;
+}
+
+.footer__license {
+  text-align: center;
+  color: #d4d4d4;
+  margin: 64px 0;
+}
