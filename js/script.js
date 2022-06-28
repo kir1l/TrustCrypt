@@ -17,3 +17,17 @@ $(document).ready(function() {
         }, 600);
     });
 });
+
+$(document).ready(function() {
+    $('.index__slider').slick();
+});
+
+$('.index__slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 230,
+    fade: true,
+    cssEase: 'linear',
+    // autoplay: true,
+    autoplaySpeed: 4300,
+});
